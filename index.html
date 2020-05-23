@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="h-100">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="text-center">
+            <p class="heading mb-5">Welcome to the Library</p>
+        </div>
+        <div id="slideShow" class="carousel slide mx-5" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li id="liA" data-target="#slideShow" data-slide-to="0" class="active"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active no1">
+                  <div class="card-deck row stay">
+
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 d-flex justify-content-end">
+            <button type="button" class="btn add mr-5" data-toggle="modal" data-target="#modal">Add a Book</button>
+        </div>
+        <div class="modal fade" id="modal">
+          <div class="modal-dialog">
+            <div class="modal-content" style="background-image: linear-gradient(#5472d3, #0d47a1, #002171);">
+              <div class="modal-header">
+                <h4 id="heading" class="modal-title">Enter the Details</h4>
+                <button id="modalClose" type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <form name="form">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Title</span>
+                    </div>
+                    <input name="title" type="text" class="form-control" placeholder="Name of the Book">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Author</span>
+                    </div>
+                    <input name="author" type="text" class="form-control" placeholder="Name of the Author">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Year</span>
+                    </div>
+                    <input name="year" type="text" class="form-control" placeholder="Year of Publishing">
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input name="check" type="checkbox" class="form-check-input" value=""><p id="check">Read</p>
+                    </label>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button id="submit" type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="javascript.js"></script>
+    </body>
+</html>
